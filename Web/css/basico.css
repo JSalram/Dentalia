@@ -1,0 +1,25 @@
+nav.navbar {
+  background: #023047;
+}
+
+nav.navbar a.btn {
+  color: white;
+  background: #fb8500;
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  nav.navbar a.active {
+    border-bottom: #fb8500 1px solid;
+  }
+}
+
+@media (max-width: 768px) {
+  nav.navbar li {
+    text-align: center;
+  }
+  nav.navbar a.btn {
+    display: block;
+  }
+}
+/*# sourceMappingURL=basico.css.map */
