@@ -1,25 +1,45 @@
 nav.navbar {
-  background: #023047;
+    background: #023047;
 }
 
-nav.navbar a.btn {
-  color: white;
-  background: #fb8500;
-  margin-left: 10px;
+nav.navbar li a:not(.btn):hover {
+    border-bottom: lightgray 1px solid;
+}
+
+nav.navbar li a.btn {
+    color: white;
+    background: #fb8600;
+    margin-left: 10px;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+nav.navbar li a.btn:hover {
+    -webkit-filter: grayscale(0.4);
+    filter: grayscale(0.4);
+}
+
+nav.navbar li a.active {
+    pointer-events: none;
+}
+
+nav.navbar li a.active.btn {
+    color: white;
+    background: black;
 }
 
 @media (min-width: 768px) {
-  nav.navbar a.active {
-    border-bottom: #fb8500 1px solid;
-  }
+    nav.navbar a.active:not(.btn) {
+        border-bottom: #fb8600 1px solid;
+    }
 }
 
 @media (max-width: 768px) {
-  nav.navbar li {
-    text-align: center;
-  }
-  nav.navbar a.btn {
-    display: block;
-  }
+    nav.navbar li {
+        text-align: center;
+    }
+    nav.navbar a.btn {
+        display: block;
+    }
 }
 /*# sourceMappingURL=basico.css.map */

@@ -1,14 +1,32 @@
+$lightOrange: #fb8600;
+
 nav.navbar {
     background: #023047;
-    a.btn {
-        color: white;
-        background: #fb8500;
-        margin-left: 10px;
+    li a {
+        &:not(.btn):hover {
+            border-bottom: lightgray 1px solid;
+        }
+        &.btn {
+            color: white;
+            background: $lightOrange;
+            margin-left: 10px;
+            transition: all 0.15s ease;
+            &:hover {
+                filter: grayscale(0.4);
+            }
+        }
+        &.active {
+            pointer-events: none;
+            &.btn {
+                color: white;
+                background: black;
+            }
+        }
     }
 
     @media (min-width: 768px) {
-        a.active {
-            border-bottom: #fb8500 1px solid;
+        a.active:not(.btn) {
+            border-bottom: $lightOrange 1px solid;
         }
     }
     @media (max-width: 768px) {
