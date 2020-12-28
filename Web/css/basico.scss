@@ -1,5 +1,4 @@
-$lightBlue: #8ecae6;
-$midBlue: #219ebc;
+// COLORES
 $darkBlue: #023047;
 $lightOrange: #ffb703;
 $darkOrange: #fb8500;
@@ -8,9 +7,6 @@ $darkOrange: #fb8500;
 nav.navbar {
     background: $darkBlue;
     li a {
-        &:not(.btn):hover {
-            border-bottom: lightgray 1px solid;
-        }
         &.btn {
             color: white;
             background: $darkOrange;
@@ -27,19 +23,23 @@ nav.navbar {
                 background: black;
             }
         }
-    }
 
-    @media (min-width: 768px) {
-        a.active:not(.btn) {
-            border-bottom: $darkOrange 1px solid;
+        @media (min-width: 768px) {
+            &:not(.btn):hover {
+                border-bottom: lightgray 1px solid;
+            }
+            &.active:not(.btn) {
+                border-bottom: $darkOrange 1px solid;
+            }
         }
     }
+
     @media (max-width: 768px) {
         li {
             text-align: center;
-        }
-        a.btn {
-            display: block;
+            a.btn {
+                display: block;
+            }
         }
     }
 }
@@ -47,11 +47,14 @@ nav.navbar {
 // FOOTER
 footer {
     background: linear-gradient(to bottom right, $lightOrange, $darkOrange);
+    h5 {
+        color: $darkBlue;
+    }
     img {
         filter: brightness(0);
     }
     a {
-        color: $darkBlue;
+        color: #212529;
         text-decoration: none;
         &:hover {
             color: black;
