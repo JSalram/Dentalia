@@ -1,18 +1,23 @@
-$lightOrange: #fb8600;
+$lightBlue: #8ecae6;
+$midBlue: #219ebc;
+$darkBlue: #023047;
+$lightOrange: #ffb703;
+$darkOrange: #fb8500;
 
+// NAVBAR
 nav.navbar {
-    background: #023047;
+    background: $darkBlue;
     li a {
         &:not(.btn):hover {
             border-bottom: lightgray 1px solid;
         }
         &.btn {
             color: white;
-            background: $lightOrange;
+            background: $darkOrange;
             margin-left: 10px;
             transition: all 0.15s ease;
             &:hover {
-                filter: grayscale(0.4);
+                background: #000;
             }
         }
         &.active {
@@ -26,7 +31,7 @@ nav.navbar {
 
     @media (min-width: 768px) {
         a.active:not(.btn) {
-            border-bottom: $lightOrange 1px solid;
+            border-bottom: $darkOrange 1px solid;
         }
     }
     @media (max-width: 768px) {
@@ -35,6 +40,22 @@ nav.navbar {
         }
         a.btn {
             display: block;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background: linear-gradient(to bottom right, $lightOrange, $darkOrange);
+    img {
+        filter: brightness(0);
+    }
+    a {
+        color: $darkBlue;
+        text-decoration: none;
+        &:hover {
+            color: black;
+            text-decoration: underline;
         }
     }
 }

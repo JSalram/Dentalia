@@ -8,15 +8,14 @@ nav.navbar li a:not(.btn):hover {
 
 nav.navbar li a.btn {
     color: white;
-    background: #fb8600;
+    background: #fb8500;
     margin-left: 10px;
     -webkit-transition: all 0.15s ease;
     transition: all 0.15s ease;
 }
 
 nav.navbar li a.btn:hover {
-    -webkit-filter: grayscale(0.4);
-    filter: grayscale(0.4);
+    background: #000;
 }
 
 nav.navbar li a.active {
@@ -30,7 +29,7 @@ nav.navbar li a.active.btn {
 
 @media (min-width: 768px) {
     nav.navbar a.active:not(.btn) {
-        border-bottom: #fb8600 1px solid;
+        border-bottom: #fb8500 1px solid;
     }
 }
 
@@ -41,5 +40,25 @@ nav.navbar li a.active.btn {
     nav.navbar a.btn {
         display: block;
     }
+}
+
+footer {
+    background: -webkit-gradient(linear, left top, right bottom, from(#ffb703), to(#fb8500));
+    background: linear-gradient(to bottom right, #ffb703, #fb8500);
+}
+
+footer img {
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+}
+
+footer a {
+    color: #023047;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: underline;
 }
 /*# sourceMappingURL=basico.css.map */
