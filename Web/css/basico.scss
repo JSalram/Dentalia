@@ -1,0 +1,61 @@
+$lightBlue: #8ecae6;
+$midBlue: #219ebc;
+$darkBlue: #023047;
+$lightOrange: #ffb703;
+$darkOrange: #fb8500;
+
+// NAVBAR
+nav.navbar {
+    background: $darkBlue;
+    li a {
+        &:not(.btn):hover {
+            border-bottom: lightgray 1px solid;
+        }
+        &.btn {
+            color: white;
+            background: $darkOrange;
+            margin-left: 10px;
+            transition: all 0.15s ease;
+            &:hover {
+                background: #000;
+            }
+        }
+        &.active {
+            pointer-events: none;
+            &.btn {
+                color: white;
+                background: black;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        a.active:not(.btn) {
+            border-bottom: $darkOrange 1px solid;
+        }
+    }
+    @media (max-width: 768px) {
+        li {
+            text-align: center;
+        }
+        a.btn {
+            display: block;
+        }
+    }
+}
+
+// FOOTER
+footer {
+    background: linear-gradient(to bottom right, $lightOrange, $darkOrange);
+    img {
+        filter: brightness(0);
+    }
+    a {
+        color: $darkBlue;
+        text-decoration: none;
+        &:hover {
+            color: black;
+            text-decoration: underline;
+        }
+    }
+}

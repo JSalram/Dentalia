@@ -1,0 +1,64 @@
+nav.navbar {
+    background: #023047;
+}
+
+nav.navbar li a:not(.btn):hover {
+    border-bottom: lightgray 1px solid;
+}
+
+nav.navbar li a.btn {
+    color: white;
+    background: #fb8500;
+    margin-left: 10px;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+}
+
+nav.navbar li a.btn:hover {
+    background: #000;
+}
+
+nav.navbar li a.active {
+    pointer-events: none;
+}
+
+nav.navbar li a.active.btn {
+    color: white;
+    background: black;
+}
+
+@media (min-width: 768px) {
+    nav.navbar a.active:not(.btn) {
+        border-bottom: #fb8500 1px solid;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.navbar li {
+        text-align: center;
+    }
+    nav.navbar a.btn {
+        display: block;
+    }
+}
+
+footer {
+    background: -webkit-gradient(linear, left top, right bottom, from(#ffb703), to(#fb8500));
+    background: linear-gradient(to bottom right, #ffb703, #fb8500);
+}
+
+footer img {
+    -webkit-filter: brightness(0);
+    filter: brightness(0);
+}
+
+footer a {
+    color: #023047;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: black;
+    text-decoration: underline;
+}
+/*# sourceMappingURL=basico.css.map */
