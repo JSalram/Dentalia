@@ -64,4 +64,8 @@ footer a:hover {
   color: black;
   text-decoration: underline;
 }
+
+footer .row {
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=basico.css.map */
