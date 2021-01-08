@@ -1,0 +1,90 @@
+h2 {
+  margin: 1em;
+  text-align: center;
+}
+
+nav.navbar {
+  float: left;
+  width: 100%;
+  background: transparent;
+  padding: 20px 1em 0 1em;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+header {
+  position: relative;
+  height: 35em;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 48, 71, 0.5)), to(rgba(2, 48, 71, 0.7))), url("../img/family.jpg");
+  background: linear-gradient(rgba(2, 48, 71, 0.5), rgba(2, 48, 71, 0.7)), url("../img/family.jpg");
+  background-size: cover;
+  background-position: center 20%;
+  color: white;
+}
+
+header .text {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 50%;
+}
+
+header .text .titulo {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 60px;
+}
+
+header .text .subtitulo {
+  margin: 20px 0 30px 0;
+  width: 60%;
+}
+
+header .text .btn {
+  font-weight: bold;
+  width: 125px;
+  border: 2px solid white;
+  color: white;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+header .text .btn:hover {
+  background-color: white;
+  color: #023047;
+}
+
+@media (max-width: 600px) {
+  header .text {
+    width: 75%;
+    top: 5%;
+  }
+  header .text .titulo {
+    font-size: 40px;
+  }
+}
+
+#secciones {
+  margin: 50px auto;
+}
+
+#secciones .carousel img {
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  max-height: 400px;
+  opacity: 0.7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#secciones .carousel img:hover {
+  opacity: 1;
+}
+
+#noticias {
+  margin: 50px auto;
+}
+/*# sourceMappingURL=index.css.map */

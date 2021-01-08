@@ -11,6 +11,7 @@
             crossorigin="anonymous"
         />
         <link rel="stylesheet" href="css/basico.css" />
+        <link rel="stylesheet" href="css/index.css" />
         <title>Dentalia</title>
     </head>
     <body>
@@ -54,54 +55,83 @@
             </div>
         </nav>
 
-        <!-- RELLENO -->
-        <div class="container-fluid">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil incidunt consequatur nulla tempore ipsum
-                molestias eaque sapiente praesentium officiis dolores maxime quos quam quae quas reiciendis ab, excepturi
-                cupiditate natus?
-            </p>
-            <p>
-                Voluptatibus, sed fugit eos qui earum facere excepturi officiis, placeat aliquam necessitatibus incidunt
-                provident. Nisi dolore nulla beatae voluptatibus repellendus, saepe iste mollitia quibusdam inventore nemo,
-                fuga vero nihil et!
-            </p>
-            <p>
-                Ad alias labore ut architecto, eius fugit blanditiis aut. Itaque, facilis? Eos, quod sint perspiciatis autem
-                rerum quibusdam beatae quas? Et est minima a omnis quod eveniet exercitationem cupiditate saepe?
-            </p>
-            <p>
-                Ad eaque voluptatem labore minus excepturi ipsam voluptate quae doloremque dicta itaque rem eligendi, velit
-                fuga illo mollitia obcaecati earum! Omnis temporibus eum soluta et vero cumque, laudantium itaque fugit?
-            </p>
-            <p>
-                Enim officiis illum earum a sequi harum corporis id quos asperiores similique, commodi ipsa debitis minima
-                consectetur quaerat unde accusantium? Cumque eos illo reprehenderit minima veritatis placeat necessitatibus
-                maiores vitae!
-            </p>
-            <p>
-                Modi iure harum natus numquam deleniti id nihil beatae recusandae, officiis ea laborum quasi sit officia
-                mollitia, vitae at atque blanditiis laboriosam enim laudantium eius saepe ducimus repudiandae nisi! Velit?
-            </p>
-            <p>
-                Itaque ad quisquam eos odio, tempore quasi quis. Minima, porro blanditiis assumenda illum unde repellat dicta
-                laboriosam molestiae illo delectus eum praesentium repudiandae fugit quis voluptatibus aperiam temporibus,
-                ducimus molestias?
-            </p>
-            <p>
-                Necessitatibus vitae nobis odio sint animi ipsam inventore. Cum libero enim et obcaecati qui, ullam nemo
-                assumenda perspiciatis, magni commodi totam dignissimos vero fugiat in aut illo voluptate quis! Consequatur.
-            </p>
-            <p>
-                Quas repudiandae repellat, possimus et dolorum voluptates alias pariatur delectus laudantium. Earum iure, eos
-                soluta impedit ipsa vitae possimus porro molestias. Cupiditate amet molestiae, recusandae debitis eaque
-                explicabo asperiores cum.
-            </p>
-            <p>
-                Mollitia quia est cum, voluptas quo enim quas necessitatibus, velit harum ratione, quos similique asperiores?
-                Optio, commodi, est porro velit similique ipsam nesciunt repudiandae nobis ducimus consequatur, omnis
-                perferendis neque.
-            </p>
+        <!-- HEADER -->
+        <header>
+            <div class="text">
+                <div class="titulo">Tu bienestar,<br />nuestro principal objetivo.</div>
+                <div class="subtitulo">
+                    Nos esforzamos día a día para ofrecerte soluciones a medida que cumplan con tus expectativas
+                    sanitarias.
+                </div>
+                <a href="nav/servicios.html" class="btn">Servicios</a>
+            </div>
+        </header>
+
+        <!-- CAROUSEL -->
+        <div class="container" id="secciones">
+            <h2>Secciones</h2>
+            <div id="carousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carousel" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carousel" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carousel" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="nav/acerca.html"><img src="img/acercaCover.jpg" class="d-block w-100" /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Acerca</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="nav/servicios.html"><img src="img/clinica.jpg" class="d-block w-100" /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Servicios</h5>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="nav/contacto.html"><img src="img/contact.jpg" class="d-block w-100" /></a>
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Contacto</h5>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- NOTICIAS -->
+        <div class="container" id="noticias">
+            <h2>Noticias</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="img/acercaCover.jpg" class="img-fluid"/>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, similique ex laborum
+                        impedit animi voluptatibus eum magni in praesentium, aliquid eius nam vitae quia suscipit saepe,
+                        sequi ipsum atque labore.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <img src="img/acercaCover.jpg" class="img-fluid"/>
+                </div>
+                <div class="col-md-3">
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto, similique ex laborum
+                        impedit animi voluptatibus eum magni in praesentium, aliquid eius nam vitae quia suscipit saepe,
+                        sequi ipsum atque labore.
+                    </p>
+                </div>
+            </div>
         </div>
 
         <!-- FOOTER -->
@@ -159,5 +189,6 @@
             integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
             crossorigin="anonymous"
         ></script>
+        <script src="js/index.js"></script>
     </body>
 </html>

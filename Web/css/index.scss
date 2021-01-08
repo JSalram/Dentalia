@@ -1,0 +1,93 @@
+// COLORES
+$darkBlue: #023047;
+$lightOrange: #ffb703;
+$darkOrange: #fb8500;
+
+// GENERAL
+h2 {
+    margin: 1em;
+    text-align: center;
+}
+
+// NAV
+nav.navbar {
+    float: left;
+    width: 100%;
+    background: transparent;
+    padding: 20px 1em 0 1em;
+    transition: all 0.3s ease;
+}
+
+// HEADER
+header {
+    position: relative;
+    height: 35em;
+    background: linear-gradient(rgba(2, 48, 71, 0.5), rgba(2, 48, 71, 0.7)), url("../img/family.jpg");
+    background-size: cover;
+    background-position: center 20%;
+    color: white;
+
+    .text {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 50%;
+
+        .titulo {
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        .subtitulo {
+            margin: 20px 0 30px 0;
+            width: 60%;
+        }
+
+        .btn {
+            font-weight: bold;
+            width: 125px;
+            border: 2px solid white;
+            color: white;
+            transition: all 0.15s ease;
+
+            &:hover {
+                background-color: white;
+                color: $darkBlue;
+            }
+        }
+
+        @media (max-width: 600px) {
+            width: 75%;
+            top: 5%;
+            .titulo {
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// CAROUSEL
+#secciones {
+    margin: 50px auto;
+
+    .carousel {
+        img {
+            border-radius: 10px;
+            object-fit: cover;
+            object-position: center;
+            max-height: 400px;
+            opacity: 0.7;
+            transition: 0.5s;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+// NOTICIAS
+#noticias {
+    margin: 50px auto;
+}
