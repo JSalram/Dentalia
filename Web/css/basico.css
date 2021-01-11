@@ -64,4 +64,72 @@ footer a:hover {
   color: black;
   text-decoration: underline;
 }
-/*# sourceMappingURL=basico.css.map */
+
+footer .row
+{
+  margin-bottom: 0;
+}
+
+.btnScrollTop
+{
+  font-size: 25px;
+  position: fixed;
+  right: 20px;
+  bottom: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #023047;
+  color: white;
+  box-shadow: 0 6px 5px grey;
+  cursor: pointer;
+  border: none;
+  transition: all .2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.btnScrollTop:hover
+{
+  background-color: #219EBC;
+}
+
+.btnScrollTop:active
+{
+  background-color: #126782;
+  box-shadow: 0 4px 5px black;
+  transform: translateY(2px);
+}
+
+.btnScrollTopHide
+{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btnScrollTopShow
+{
+  opacity: 1;
+  pointer-events: all;
+  animation-name: btnScrollTopMove;
+  animation-duration: 1s;
+}
+
+@keyframes btnScrollTopMove
+{
+  from
+  {
+    right: 20px;
+    bottom: 0px;
+    background-color: #219EBC;
+  }
+
+  to
+  {
+    right: 20px;
+    bottom: 40px;
+    background-color: #023047;
+  }
+}
