@@ -1,7 +1,7 @@
 header
 {
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/equipo.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/equipo.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -36,3 +36,29 @@ h3
     font-weight: bold;
 }
 
+.card
+{
+  border: none;
+}
+
+.card-body h4
+{
+  font-weight: bold;
+}
+
+.card-body
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  color: #023047;
+  transition: opacity .4s ease-in-out;
+}
+
+.card-body:hover
+{
+  opacity: 0.75;
+}
