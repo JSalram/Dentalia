@@ -7,14 +7,25 @@ $midDarkBlue: #126782;
         h2 {
             color: $midBlue;
         }
+        .btn {
+            width: 100%;
+            background: $midBlue;
+            transition: all 0.15s ease;
+            font-weight: bold;
+            &:hover {
+                background: $midDarkBlue;
+                color: white;
+            }
+        }
     }
-    .btn {
-        background: $midBlue;
-        transition: all 0.15s ease;
-        font-weight: bold;
-        &:hover {
-            background: $midDarkBlue;
-            color: white
+    
+    .img {
+        min-height: 250px;
+        background: url(../img/promocion.jpg);
+        background-size: cover;
+        @media (max-width: 576px) {
+            margin: auto;
+            width: 95%;
         }
     }
 }

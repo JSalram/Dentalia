@@ -11,11 +11,13 @@ h2 {
 
 // NAV
 nav.navbar {
-    float: left;
-    width: 100%;
-    background: transparent;
-    padding: 20px 1em 0 1em;
-    transition: all 0.3s ease;
+    @media (min-width: 768px) {
+        float: left;
+        width: 100%;
+        background: transparent;
+        padding: 20px 1em 0 1em;
+        transition: all 0.3s ease;
+    }
 }
 
 // HEADER
