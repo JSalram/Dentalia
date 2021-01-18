@@ -1,0 +1,20 @@
+#promocion .text h2 {
+  color: #219ebc;
+}
+
+#promocion .btn {
+  background: #219ebc;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+  font-weight: bold;
+}
+
+#promocion .btn:hover {
+  background: #126782;
+  color: white;
+}
+
+#actualidad h2 {
+  margin: 1em;
+}
+/*# sourceMappingURL=noticias.css.map */
