@@ -9,15 +9,13 @@ document.body.appendChild(scrollTop);
 
 const btnScrollTop = document.querySelector(".btnScrollTop");
 
-btnScrollTop.addEventListener("click", function ()
-{
-    window.scrollTo
-    ({
+btnScrollTop.addEventListener("click", function () {
+    window.scrollTo({
         top: 0,
         left: 0,
-        behavior: "smooth"
-    });    
-})
+        behavior: "smooth",
+    });
+});
 
 let viewPortHeight = window.innerHeight;
 
@@ -28,7 +26,7 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    if (window.innerWidth > 768 && (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         nav.style.cssText = "\
         background: #023047;\
         padding: 8px";
@@ -37,12 +35,9 @@ function scrollFunction() {
         background: transparent;\
         padding-top: 20px 1em 0 1em";
     }
-    if (window.scrollY <= viewPortHeight)
-    {
+    if (window.scrollY <= viewPortHeight) {
         btnScrollTop.className = "btnScrollTop btnScrollTopHide";
-    }
-    else
-    {
+    } else {
         btnScrollTop.className = "btnScrollTop btnScrollTopShow";
     }
 }
