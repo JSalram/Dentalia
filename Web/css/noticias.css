@@ -1,17 +1,28 @@
+#promocion {
+  background: #FFB703;
+  text-align: center;
+}
+
 #promocion .text h2 {
-  color: #219ebc;
+  color: #126782;
+  border-bottom: 4px solid #FB8500;
+}
+
+#promocion .text :not(h2) {
+  color: #023047;
 }
 
 #promocion .text .btn {
   width: 100%;
-  background: #219ebc;
+  color: white;
+  background: #126782;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   font-weight: bold;
 }
 
 #promocion .text .btn:hover {
-  background: #126782;
+  background: #023047;
   color: white;
 }
 
