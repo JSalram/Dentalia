@@ -1,34 +1,34 @@
-const icon = document.createElement("i");
-icon.classList.add("fas", "fa-arrow-up");
+window.onscroll = () => {
+    scrollTop();
+};
 
-const scrollTop = document.createElement("div");
-scrollTop.className = "btnScrollTop btnScrollTopHide";
+function scrollTop() {
+    const icon = document.createElement("i");
+    icon.classList.add("fas", "fa-arrow-up");
 
-scrollTop.appendChild(icon);
-document.body.appendChild(scrollTop);
+    const scrollTop = document.createElement("div");
+    scrollTop.className = "btnScrollTop btnScrollTopHide";
 
-const btnScrollTop = document.querySelector(".btnScrollTop");
+    scrollTop.appendChild(icon);
+    document.body.appendChild(scrollTop);
 
-btnScrollTop.addEventListener("click", function ()
-{
-    window.scrollTo
-    ({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    });    
-})
+    const btnScrollTop = document.querySelector(".btnScrollTop");
 
-let viewPortHeight = window.innerHeight;
+    btnScrollTop.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+        });
+    });
 
-window.onscroll = function ()
-{
-    if (window.scrollY <= viewPortHeight)
-    {
+    let viewPortHeight = window.innerHeight;
+    
+    if (window.scrollY <= viewPortHeight) {
         btnScrollTop.className = "btnScrollTop btnScrollTopHide";
-    }
-    else
-    {
+    } else {
         btnScrollTop.className = "btnScrollTop btnScrollTopShow";
     }
 }
+
+export { scrollTop };
