@@ -1,32 +1,34 @@
-// COLORES
-$midBlue: #219ebc;
-$midDarkBlue: #126782;
+@import "./colores";
 
 #promocion {
+    background: linear-gradient(to right bottom, $melocoton, $lightOrange);
     .text {
+        color: $darkBlue;
         h2 {
-            color: $midBlue;
+            color: $midDarkBlue;
+            border-bottom: 4px solid $orange;
         }
         .btn {
             width: 100%;
-            background: $midBlue;
+            color: white;
+            background: $midDarkBlue;
             transition: all 0.15s ease;
             font-weight: bold;
             &:hover {
-                background: $midDarkBlue;
+                background: $darkBlue;
                 color: white;
             }
         }
     }
-    
+
     .img {
         min-height: 250px;
         background: url(../img/promocion.jpg);
         background-size: cover;
-        @media (max-width: 576px) {
-            margin: auto;
-            width: 95%;
-        }
+    }
+
+    @media (max-width: 576px) {
+        width: 95%;
     }
 }
 

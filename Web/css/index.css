@@ -71,15 +71,16 @@ header .text .btn:hover {
 }
 
 #secciones .carousel img {
+  min-height: 200px;
   border-radius: 10px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
   max-height: 400px;
-  opacity: 0.7;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  opacity: 0.75;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 #secciones .carousel img:hover {
@@ -88,5 +89,10 @@ header .text .btn:hover {
 
 #noticias {
   margin: 50px auto;
+}
+
+#noticias .imgCard {
+  background: url(../img/noticia.jpg) center;
+  background-size: cover;
 }
 /*# sourceMappingURL=index.css.map */

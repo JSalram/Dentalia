@@ -1,21 +1,46 @@
 header
 {
-    height: 100vh;
-    background-image: url('../img/acercaCover.jpg');
+    height: 95vh;
+    background-image: linear-gradient(rgba(71, 49, 2, 0.5), rgba(2, 55, 71, 0.7)), url('../img/acerca.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    color: white;
 }
 header .eslogan
 {
-    margin-top: 30vh;
-    margin-left: 15vh;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 50%;
 }
 
 .eslogan h1
 {
     font-size: 50px;
     font-weight: bold;
+    line-height: 60px;
+}
+
+.eslogan p
+{
+    margin: 20px 0 30px 0;
+    width: 60%;
+}
+
+@media (max-width: 600px)
+{
+    header .eslogan
+    {
+        top: 5%;
+        width: 75%;
+    }
+    header .eslogan h1
+    {
+        line-height: 50px;
+        font-size: 40px;
+    }
 }
 
 .row
@@ -33,4 +58,9 @@ h3
 {
     text-align: center;
     font-weight: bold;
+}
+
+.tour
+{
+    width: 800px;
 }

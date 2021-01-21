@@ -1,17 +1,28 @@
+#promocion {
+  background: -webkit-gradient(linear, left top, right bottom, from(#FDA949), to(#FFB703));
+  background: linear-gradient(to right bottom, #FDA949, #FFB703);
+}
+
+#promocion .text {
+  color: #023047;
+}
+
 #promocion .text h2 {
-  color: #219ebc;
+  color: #126782;
+  border-bottom: 4px solid #FB8500;
 }
 
 #promocion .text .btn {
   width: 100%;
-  background: #219ebc;
+  color: white;
+  background: #126782;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
   font-weight: bold;
 }
 
 #promocion .text .btn:hover {
-  background: #126782;
+  background: #023047;
   color: white;
 }
 
@@ -22,8 +33,7 @@
 }
 
 @media (max-width: 576px) {
-  #promocion .img {
-    margin: auto;
+  #promocion {
     width: 95%;
   }
 }

@@ -65,13 +65,7 @@ footer a:hover {
   text-decoration: underline;
 }
 
-footer .row
-{
-  margin-bottom: 0;
-}
-
-.btnScrollTop
-{
+.btnScrollTop {
   font-size: 25px;
   position: fixed;
   right: 20px;
@@ -81,55 +75,72 @@ footer .row
   border-radius: 50%;
   background-color: #023047;
   color: white;
+  -webkit-box-shadow: 0 6px 5px grey;
   box-shadow: 0 6px 5px grey;
   cursor: pointer;
   border: none;
-  transition: all .2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  
 }
 
-.btnScrollTop:hover
-{
-  background-color: #219EBC;
+.btnScrollTop:hover {
+  background-color: #219ebc;
 }
 
-.btnScrollTop:active
-{
+.btnScrollTop:active {
   background-color: #126782;
+  -webkit-box-shadow: 0 4px 5px black;
   box-shadow: 0 4px 5px black;
+  -webkit-transform: translateY(2px);
   transform: translateY(2px);
 }
 
-.btnScrollTopHide
-{
+.btnScrollTopHide {
   opacity: 0;
   pointer-events: none;
 }
 
-.btnScrollTopShow
-{
+.btnScrollTopShow {
   opacity: 1;
   pointer-events: all;
+  -webkit-animation-name: btnScrollTopMove;
   animation-name: btnScrollTopMove;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
-@keyframes btnScrollTopMove
-{
-  from
-  {
+@-webkit-keyframes btnScrollTopMove {
+  from {
     right: 20px;
     bottom: 0px;
-    background-color: #219EBC;
+    background-color: #219ebc;
   }
-
-  to
-  {
+  to {
     right: 20px;
     bottom: 40px;
     background-color: #023047;
   }
 }
+
+@keyframes btnScrollTopMove {
+  from {
+    right: 20px;
+    bottom: 0px;
+    background-color: #219ebc;
+  }
+  to {
+    right: 20px;
+    bottom: 40px;
+    background-color: #023047;
+  }
+}
+/*# sourceMappingURL=basico.css.map */

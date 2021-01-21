@@ -1,64 +1,90 @@
-header
-{
-    height: 100vh;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('../img/equipo.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
-header .eslogan
-{
-    margin-top: 30vh;
-    margin-left: 15vh;
+header {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(71, 49, 2, 0.5)), to(rgba(2, 55, 71, 0.7))), url("../img/equipo.jpg");
+  background-image: linear-gradient(rgba(71, 49, 2, 0.5), rgba(2, 55, 71, 0.7)), url("../img/equipo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: white;
 }
 
-.eslogan h1
-{
-    font-size: 50px;
-    font-weight: bold;
+header .eslogan {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 50%;
 }
 
-.row
-{
-    margin-top: 50px;
-    margin-bottom: 50px;
+.eslogan h1 {
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 60px;
 }
 
-.row:first-of-type
-{
-    margin-top: 0;
+.eslogan p {
+  margin: 20px 0 30px 0;
+  width: 60%;
 }
 
-h3
-{
-    text-align: center;
-    font-weight: bold;
+@media (max-width: 600px) {
+  header .eslogan {
+    top: 5%;
+    width: 75%;
+  }
+  header .eslogan h1 {
+    line-height: 50px;
+    font-size: 40px;
+  }
 }
 
-.card
-{
-  border: none;
+.row {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.card-body h4
-{
+.row:first-of-type {
+  margin-top: 0;
+}
+
+h3 {
+  text-align: center;
   font-weight: bold;
 }
 
-.card-body
-{
+.card {
+  border: none;
+  cursor: default;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin: 10px;
+}
+
+.card-body h4 {
+  font-weight: bold;
+}
+
+.card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   background-color: white;
   opacity: 0;
   color: #023047;
+  -webkit-transition: opacity .4s ease-in-out;
   transition: opacity .4s ease-in-out;
 }
 
-.card-body:hover
-{
+.card-body:hover {
   opacity: 0.75;
 }
