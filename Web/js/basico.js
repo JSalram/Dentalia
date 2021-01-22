@@ -23,7 +23,7 @@ function scrollTop() {
     });
 
     let viewPortHeight = window.innerHeight;
-    
+
     if (window.scrollY <= viewPortHeight) {
         btnScrollTop.className = "btnScrollTop btnScrollTopHide";
     } else {

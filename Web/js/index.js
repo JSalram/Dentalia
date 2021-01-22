@@ -2,12 +2,7 @@ import { scrollTop } from "./basico.js";
 
 let nav = document.querySelector("nav.navbar");
 
-window.onscroll = function () {
-    scrollFunction();
-    scrollTop();
-};
-
-window.onresize = function () {
+window.onscroll = window.onresize = () => {
     scrollFunction();
     scrollTop();
 };
