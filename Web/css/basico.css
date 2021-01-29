@@ -4,7 +4,7 @@ nav.navbar {
 
 nav.navbar li a.btn {
   color: white;
-  background: #fb8500;
+  background: #FB8500;
   margin-left: 10px;
   -webkit-transition: all 0.15s ease;
   transition: all 0.15s ease;
@@ -28,7 +28,7 @@ nav.navbar li a.active.btn {
     border-bottom: lightgray 1px solid;
   }
   nav.navbar li a.active:not(.btn) {
-    border-bottom: #fb8500 1px solid;
+    border-bottom: #FB8500 1px solid;
   }
 }
 
@@ -42,8 +42,8 @@ nav.navbar li a.active.btn {
 }
 
 footer {
-  background: -webkit-gradient(linear, left top, right bottom, from(#ffb703), to(#fb8500));
-  background: linear-gradient(to bottom right, #ffb703, #fb8500);
+  background: -webkit-gradient(linear, left top, right bottom, from(#FFB703), to(#FB8500));
+  background: linear-gradient(to bottom right, #FFB703, #FB8500);
 }
 
 footer h5 {

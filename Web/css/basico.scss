@@ -1,7 +1,4 @@
-// COLORES
-$darkBlue: #023047;
-$lightOrange: #ffb703;
-$darkOrange: #fb8500;
+@import "./colores";
 
 // NAVBAR
 nav.navbar {
@@ -9,7 +6,7 @@ nav.navbar {
     li a {
         &.btn {
             color: white;
-            background: $darkOrange;
+            background: $orange;
             margin-left: 10px;
             transition: all 0.15s ease;
             &:hover {
@@ -29,7 +26,7 @@ nav.navbar {
                 border-bottom: lightgray 1px solid;
             }
             &.active:not(.btn) {
-                border-bottom: $darkOrange 1px solid;
+                border-bottom: $orange 1px solid;
             }
         }
     }
@@ -46,7 +43,7 @@ nav.navbar {
 
 // FOOTER
 footer {
-    background: linear-gradient(to bottom right, $lightOrange, $darkOrange);
+    background: linear-gradient(to bottom right, $lightOrange, $orange);
     h5 {
         color: $darkBlue;
     }
