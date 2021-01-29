@@ -1,0 +1,23 @@
+form label {
+  color: #126782;
+}
+
+form input::-webkit-outer-spin-button,
+form input::-webkit-inner-spin-button,
+form input {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+form button {
+  font-weight: bold !important;
+  background: #8ECAE6 !important;
+  -webkit-transition: 0.2s !important;
+  transition: 0.2s !important;
+}
+
+form button:hover {
+  background: #219EBC !important;
+  color: white !important;
+}
+/*# sourceMappingURL=contacto.css.map */

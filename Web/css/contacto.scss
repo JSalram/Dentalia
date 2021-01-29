@@ -1,0 +1,24 @@
+@import "./colores";
+
+form {
+    label {
+        color: $midDarkBlue;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button,
+    input {
+        appearance: none;
+    }
+
+    button {
+        font-weight: bold !important;
+        background: $lightBlue !important;
+        transition: 0.2s !important;
+
+        &:hover {
+            background: $midLightBlue !important;
+            color: white !important;
+        }
+    }
+}
