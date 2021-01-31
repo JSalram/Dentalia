@@ -20,4 +20,8 @@ form button:hover {
   background: #219EBC !important;
   color: white !important;
 }
+
+form textarea {
+  resize: none;
+}
 /*# sourceMappingURL=contacto.css.map */

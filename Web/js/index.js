@@ -12,7 +12,7 @@ function scrollFunction() {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
             nav.style.cssText = "\
             background: #023047;\
-            padding: 8px";
+            padding: 8px 0";
         } else {
             nav.style.cssText = "\
             background: transparent;\
