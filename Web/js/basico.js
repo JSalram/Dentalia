@@ -3,14 +3,18 @@ window.onscroll = () => {
 };
 
 function scrollTop() {
-    const icon = document.createElement("i");
-    icon.classList.add("fas", "fa-arrow-up");
+    let existBtn = document.querySelector(".btnScrollTop");
 
-    const scrollTop = document.createElement("div");
-    scrollTop.className = "btnScrollTop btnScrollTopHide";
-
-    scrollTop.appendChild(icon);
-    document.body.appendChild(scrollTop);
+    if(!(typeof(existBtn) != 'undefined' && existBtn != null)){
+        const icon = document.createElement("i");
+        icon.classList.add("fas", "fa-arrow-up");
+    
+        const scrollTop = document.createElement("div");
+        scrollTop.className = "btnScrollTop btnScrollTopHide";
+    
+        scrollTop.appendChild(icon);
+        document.body.appendChild(scrollTop);
+    }
 
     const btnScrollTop = document.querySelector(".btnScrollTop");
 
