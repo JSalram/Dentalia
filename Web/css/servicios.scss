@@ -1,0 +1,92 @@
+@import "./colores";
+
+header
+{
+    height: 100vh;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(71, 49, 2, 0.5)), to(rgba(2, 55, 71, 0.7))), url("../img/equipo.jpg");
+    background-image: linear-gradient(rgba(71, 49, 2, 0.5), rgba(2, 55, 71, 0.7)), url("../img/serviciosCover.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    color: white;
+
+    .eslogan
+    {
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        width: 50%;
+
+        h1
+        {
+            font-size: 50px;
+            font-weight: bold;
+            line-height: 60px;
+        }
+
+        p
+        {
+            margin: 20px 0 30px 0;
+            width: 60%;
+        }
+
+        @media (max-width: 600px) 
+        {
+            top: 5%;
+            width: 75%;
+        
+            h1 
+            {
+                line-height: 50px;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+h3
+{
+    text-align: center;
+    font-weight: bold;
+}
+
+.card
+{
+    border: none;
+    cursor: default;
+    user-select: none;
+
+    .card-body
+    {
+        background-color: white;
+        opacity: 0;
+        color: $darkBlue;
+        transition: opacity .4s ease-in-out;
+
+        &:hover
+        {
+            opacity: 0.75;
+        }
+        
+        .btn
+        {
+            background-color: $darkBlue;
+            color: white;
+            box-shadow: 0 6px 5px grey;
+            border: none;
+
+            &:hover
+            {
+                background-color: $midLightBlue;
+            }
+            &:active
+            {
+                background-color: $midDarkBlue;
+                box-shadow: 0 4px 5px black;
+                transform: translateY(2px);
+            }
+        }
+    }
+}
+
