@@ -19,9 +19,10 @@
             defer
         ></script>
         <link rel="stylesheet" href="../css/basico.css" />
-        <link rel="stylesheet" href="../css/contacto.css">
+        <link rel="stylesheet" href="../css/contacto.css" />
         <script src="https://kit.fontawesome.com/b828dc0944.js" crossorigin="anonymous"></script>
         <script type="module" src="../js/basico.js" defer></script>
+        <script type="module" src="../js/contacto.js" defer></script>
         <title>Contacto</title>
     </head>
 
@@ -61,6 +62,20 @@
                         <li class="nav-item">
                             <a class="btn active" href="../nav/contacto.html">Contacto</a>
                         </li>
+                        <li class="nav-item login ms-2">
+                            <div class="dropdown">
+                                <button
+                                    class="btn btn-dark dropdown-toggle"
+                                    type="button"
+                                    id="dropdownMenuButton"
+                                    data-bs-toggle="dropdown"
+                                    aria-expanded="false"
+                                >
+                                    <i class="fas fa-user"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"></ul>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -75,38 +90,75 @@
                         <div class="row">
                             <div class="form-group col-md-6 my-2">
                                 <label for="nombre">Nombre</label>
-                                <input id="nombre" class="form-control" type="text" name="nombre" autocomplete="off">
+                                <input
+                                    id="nombre"
+                                    class="form-control"
+                                    type="text"
+                                    name="nombre"
+                                    autocomplete="off"
+                                    required
+                                />
                             </div>
                             <div class="form-group col-md-6 my-2">
                                 <label for="correo">Correo</label>
-                                <input id="correo" class="form-control" type="email" name="correo" autocomplete="off">
+                                <input
+                                    id="correo"
+                                    class="form-control"
+                                    type="email"
+                                    name="correo"
+                                    autocomplete="off"
+                                    required
+                                />
                             </div>
                             <div class="form-group col-md-6 my-2">
                                 <label for="asunto">Asunto</label>
-                                <input id="asunto" class="form-control" type="text" name="asunto" autocomplete="off">
+                                <input
+                                    id="asunto"
+                                    class="form-control"
+                                    type="text"
+                                    name="asunto"
+                                    autocomplete="off"
+                                    required
+                                />
                             </div>
                             <div class="form-group col-md-6 my-2">
                                 <label for="tlf">Teléfono</label>
-                                <input id="tlf" class="form-control" type="number" name="tlf" autocomplete="off">
+                                <input id="tlf" class="form-control" type="number" name="tlf" autocomplete="off" required />
                             </div>
-                            <div class="form-group">
+                            <div class="form-group my-2">
                                 <label for="msj">Mensaje</label>
-                                <textarea id="msj" class="form-control" name="msj" rows="4"></textarea>
+                                <textarea id="msj" class="form-control" name="msj" rows="4" required></textarea>
+                            </div>
+                            <div class="form-group my-2">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input
+                                            type="checkbox"
+                                            class="form-check-input"
+                                            name="terms"
+                                            id="terms"
+                                            value="checkedValue"
+                                            required
+                                        />
+                                        Aceptar términos y condiciones
+                                    </label>
+                                </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn my-2 w-100">Enviar</button>
+                        <button class="btn my-2 w-100">Enviar</button>
                     </form>
                 </div>
 
-                <iframe 
+                <iframe
                     class="col-md-6 shadow p-1"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.2551889840342!2d-6.231386684873005!3d36.523837390907254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dcde53ef5f06b%3A0xdf9bb154e57f528a!2sCl%C3%ADnica%20Dental%20Erytheia%20(R%C3%ADo%20San%20Pedro)!5e0!3m2!1ses!2ses!4v1612086238665!5m2!1ses!2ses" 
-                    width="500" 
-                    height="400" 
-                    frameborder="0" 
-                    allowfullscreen 
-                    aria-hidden="false" 
-                    tabindex="0">
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3206.2551889840342!2d-6.231386684873005!3d36.523837390907254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0dcde53ef5f06b%3A0xdf9bb154e57f528a!2sCl%C3%ADnica%20Dental%20Erytheia%20(R%C3%ADo%20San%20Pedro)!5e0!3m2!1ses!2ses!4v1612086238665!5m2!1ses!2ses"
+                    width="500"
+                    height="400"
+                    frameborder="0"
+                    allowfullscreen
+                    aria-hidden="false"
+                    tabindex="0"
+                >
                 </iframe>
             </div>
         </div>

@@ -11,7 +11,12 @@ nav.navbar li a.btn {
 }
 
 nav.navbar li a.btn:hover {
-  background: #000;
+  background: #8b4a00;
+}
+
+nav.navbar li a.btn:focus {
+  -webkit-box-shadow: 0 0 0 0.25rem rgba(255, 166, 0, 0.3);
+          box-shadow: 0 0 0 0.25rem rgba(255, 166, 0, 0.3);
 }
 
 nav.navbar li a.active {
@@ -20,7 +25,7 @@ nav.navbar li a.active {
 
 nav.navbar li a.active.btn {
   color: white;
-  background: black;
+  background: #8b4a00;
 }
 
 @media (min-width: 768px) {
@@ -38,6 +43,12 @@ nav.navbar li a.active.btn {
   }
   nav.navbar li a.btn {
     display: block;
+  }
+  nav.navbar li.login {
+    margin-top: 10px;
+  }
+  nav.navbar li.login button {
+    width: 100%;
   }
 }
 

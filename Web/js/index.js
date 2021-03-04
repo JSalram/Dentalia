@@ -1,8 +1,8 @@
-import { scrollTop } from "./basico.js";
+import { scrollTop, user } from "./modules.js";
 
 let nav = document.querySelector("nav.navbar");
 
-window.onscroll = window.onresize = () => {
+window.onscroll = window.onresize = window.onload = () => {
     scrollFunction();
     scrollTop();
 };
@@ -24,3 +24,5 @@ function scrollFunction() {
         padding: 8px";
     }
 }
+
+user(".");
