@@ -1,4 +1,4 @@
-import { scrollTop, user } from "./modules.js";
+import { scrollTop, user } from "./modulos.js";
 
 let nav = document.querySelector("nav.navbar");
 
