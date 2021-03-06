@@ -87,11 +87,55 @@ header {
     }
 }
 
+// SERVICIOS
+#servicios {
+    background: linear-gradient(rgba(228, 237, 255, 0.479), rgb(228, 237, 255)), url("../img/serviciosIndex.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .btn {
+        background-color: $midDarkBlue;
+        color: white;
+        transition: all 0.15s ease;
+
+        &:hover {
+            background-color: $darkBlue;
+        }
+    }
+}
+
 // NOTICIAS
 #noticias {
     margin: 50px auto;
+
+    .card-body {
+        height: 18rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $midLightBlue;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $midDarkBlue;
+        }
+    }
+
     .imgCard {
-        background: url(../img/noticia.jpg) center;
+        &#n1 {
+            background-image: url(../img/empaste.jpg);
+        }
+        &#n2 {
+            background-image: url(../img/covid.jpg);
+        }
+
+        background-repeat: no-repeat;
+        background-position: center;
         background-size: cover;
     }
 }

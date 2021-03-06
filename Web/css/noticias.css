@@ -38,6 +38,46 @@
   }
 }
 
+#actualidad .card-img-top {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#actualidad .card-img-top#n1 {
+  background-image: url(../img/empaste.jpg);
+}
+
+#actualidad .card-img-top#n2 {
+  background-image: url(../img/covid.jpg);
+}
+
+#actualidad .card-img-top#n3 {
+  background-image: url(../img/implante.jpg);
+}
+
+#actualidad .card-body {
+  height: 18rem;
+  overflow: auto;
+}
+
+#actualidad .card-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+#actualidad .card-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#actualidad .card-body::-webkit-scrollbar-thumb {
+  background: #219EBC;
+}
+
+#actualidad .card-body::-webkit-scrollbar-thumb:hover {
+  background: #126782;
+}
+
 #actualidad h2 {
   margin: 1em;
 }

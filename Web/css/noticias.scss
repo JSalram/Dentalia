@@ -33,6 +33,41 @@
 }
 
 #actualidad {
+    .card-img-top {
+        height: 200px;
+
+        &#n1 {
+            background-image: url(../img/empaste.jpg);
+        }
+        &#n2 {
+            background-image: url(../img/covid.jpg);
+        }
+        &#n3 {
+            background-image: url(../img/implante.jpg);
+        }
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .card-body {
+        height: 18rem;
+        overflow: auto;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $midLightBlue;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background: $midDarkBlue;
+        }
+    }
+
     h2 {
         margin: 1em;
     }

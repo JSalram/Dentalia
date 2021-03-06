@@ -8,9 +8,14 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon" />
     <!-- BOOTSTRAP CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous" defer></script>
+    <script src="https://kit.fontawesome.com/b828dc0944.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/basico.css" />
+    <script type="module" src="../js/basico.js" defer></script>
     <title>Registro</title>
 </head>
 
@@ -43,6 +48,14 @@ session_start();
                     <li class="nav-item">
                         <a class="btn" href="../nav/contacto.html">Contacto</a>
                     </li>
+                    <li class="nav-item login ms-2">
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton"></ul>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -67,7 +80,8 @@ session_start();
                 $sql = "INSERT INTO usuario VALUES(DEFAULT, '$usr','$pwd', 0)";
 
                 if ($conn->query($sql)) {
-                    $_SESSION["registro"] = '<p class="text-center py-2 bg-success text-light">Usuario registrado con éxito</p>';
+                    $_SESSION["user"] = $usr;
+                    $_SESSION["registro"] = '<p class="text-center py-2 bg-success text-light">Usuario registrado y logueado con éxito</p>';
                 } else {
                     $_SESSION["registro"] = '<p class="text-center py-2 bg-danger text-light">Usuario y/o contraseña ya existentes</p>';
                 }
@@ -92,15 +106,15 @@ session_start();
                 <form action="registro.php" method="POST">
                     <div class="form-group mb-3">
                         <label for="usr">Nombre de usuario</label>
-                        <input type="text" name="usr" id="usr" class="form-control" autocomplete="off" autofocus>
+                        <input type="text" name="usr" id="usr" class="form-control" autocomplete="off" autofocus <?php echo isset($_SESSION["user"]) ? "disabled" : "" ?>>
                     </div>
                     <div class="form-group my-3">
                         <label for="pwd">Contraseña</label>
-                        <input type="password" name="pwd" id="pwd" class="form-control" autocomplete="off">
+                        <input type="password" name="pwd" id="pwd" class="form-control" autocomplete="off" <?php echo isset($_SESSION["user"]) ? "disabled" : "" ?>>
                     </div>
                     <div class="form-group my-3">
                         <label for="pwd2">Repetir contraseña</label>
-                        <input type="password" name="pwd2" id="pwd2" class="form-control" autocomplete="off">
+                        <input type="password" name="pwd2" id="pwd2" class="form-control" autocomplete="off" <?php echo isset($_SESSION["user"]) ? "disabled" : "" ?>>
                     </div>
                     <div class="form-group mt-3">
                         <input class="btn btn-success w-100" type="submit" value="Registrarse">
