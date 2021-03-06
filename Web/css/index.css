@@ -87,12 +87,60 @@ header .text .btn:hover {
   opacity: 1;
 }
 
+#servicios {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(228, 237, 255, 0.479)), to(#e4edff)), url("../img/serviciosIndex.jpg");
+  background: linear-gradient(rgba(228, 237, 255, 0.479), #e4edff), url("../img/serviciosIndex.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#servicios .btn {
+  background-color: #126782;
+  color: white;
+  -webkit-transition: all 0.15s ease;
+  transition: all 0.15s ease;
+}
+
+#servicios .btn:hover {
+  background-color: #023047;
+}
+
 #noticias {
   margin: 50px auto;
 }
 
+#noticias .card-body {
+  height: 18rem;
+  overflow: auto;
+}
+
+#noticias .card-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+#noticias .card-body::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#noticias .card-body::-webkit-scrollbar-thumb {
+  background: #219EBC;
+}
+
+#noticias .card-body::-webkit-scrollbar-thumb:hover {
+  background: #126782;
+}
+
 #noticias .imgCard {
-  background: url(../img/noticia.jpg) center;
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
+}
+
+#noticias .imgCard#n1 {
+  background-image: url(../img/empaste.jpg);
+}
+
+#noticias .imgCard#n2 {
+  background-image: url(../img/covid.jpg);
 }
 /*# sourceMappingURL=index.css.map */
