@@ -1,4 +1,4 @@
-import { scrollTop, user } from "./modulos.js";
+import { muestraProductos, scrollTop, user } from "./modulos.js";
 
 let nav = document.querySelector("nav.navbar");
 
@@ -25,4 +25,8 @@ function scrollFunction() {
     }
 }
 
-user(".");
+async function dropdown() {
+    await user(".");
+    muestraProductos();
+}
+dropdown();

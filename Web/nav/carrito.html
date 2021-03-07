@@ -19,11 +19,10 @@
             defer
         ></script>
         <link rel="stylesheet" href="../css/basico.css" />
-        <link rel="stylesheet" href="../css/servicios.css" />
         <script src="https://kit.fontawesome.com/b828dc0944.js" crossorigin="anonymous"></script>
         <script type="module" src="../js/basico.js" defer></script>
-        <script type="module" src="../js/servicios.js" defer></script>
-        <title>Servicios</title>
+        <script type="module" src="../js/carrito.js" defer></script>
+        <title>Carrito</title>
     </head>
     <body>
         <!-- NAVBAR -->
@@ -50,7 +49,7 @@
                             <a class="nav-link" aria-current="page" href="../nav/acerca.html">Acerca de</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="../nav/servicios.html">Servicios</a>
+                            <a class="nav-link" href="../nav/servicios.html">Servicios</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="../nav/equipo.html">Equipo</a>
@@ -80,120 +79,46 @@
             </div>
         </nav>
 
-        <div class="container-fluid">
-            <div class="row">
-                <header>
-                    <div class="eslogan">
-                        <h1>
-                            Una solución
-                            <br />
-                            para cada necesidad.
-                        </h1>
-                        <p>
-                            Nuestra clínica dental dispone de los
-                            <br />
-                            tratamientos de odontología más avanzados.
-                        </p>
+        <!-- Main -->
+        <div class="">
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row w-100">
+                        <div class="col-lg-12 col-md-12 col-12">
+                            <h3 class="display-5 mb-2 text-center">Carrito</h3>
+                            <p class="mb-5 text-center">
+                                <i class="cantidadTotal text-info font-weight-bold"></i>
+                                servicios en el carrito
+                            </p>
+                            <table class="table table-condensed table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 60%">Servicios</th>
+                                        <th style="width: 12%">Precio</th>
+                                        <th style="width: 10%">Cantidad</th>
+                                        <th style="width: 16%"></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="container-servicios">
+                                    <!-- tr de servicios -->
+                                </tbody>
+                            </table>
+                            <div class="float-right text-right">
+                                <h4>Total:</h4>
+                                <h1 class="total"></h1>
+                            </div>
+                        </div>
                     </div>
-                </header>
-            </div>
-
-            <div class="container my-3">
-                <div class="alert alert-info alert-dismissible fade show" role="alert">
-                    Pasa el ratón sobre los servicios o pincha en ellos para poder añadirlos al carro.
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            </div>
-
-            <h3 class="m-5">Nuestros servicios</h3>
-            <div class="row justify-content-center">
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio1.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Limpieza general</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">50.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
+                    <div class="row mt-4 d-flex align-items-center">
+                        <div class="col-sm-6 order-md-2 text-right">
+                            <a href="" class="btn btn-primary mb-4 btn-lg pl-5 pr-5">Comprar</a>
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
+                            <a href="../nav/servicios.html"> <i class="fas fa-arrow-left me-2"></i>Continúa comprando</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio2.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Evaluación general</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">35.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio3.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Prótesis dental</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">150.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio4.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Endodoncia</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">75.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio5.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Odontología infantil</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">95.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-3 mx-3 mb-5">
-                    <div class="card shadow">
-                        <img src="../img/servicio6.jpg" class="card-img-top" alt="..." />
-                        <h5 class="servicio card-title p-2 text-center">Terapéutica dental</h5>
-                        <div class="card-body card-img-overlay d-flex flex-column justify-content-center">
-                            <h5 class="precio align-self-center">85.00€</h5>
-                            <div class="aniade btn btn-lg align-self-center my-3">Añadir</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- TOASTS -->
-        <div class="position-fixed bottom-0 start-0 p-3" style="z-index: 5">
-            <div
-                class="toast align-items-center bg-success text-light hide"
-                role="alert"
-                aria-live="assertive"
-                aria-atomic="true"
-            >
-                <div class="d-flex">
-                    <button
-                        type="button"
-                        id="hideToast"
-                        class="btn-close btn-close-white mx-2 my-auto"
-                        data-bs-dismiss="toast"
-                        aria-label="Close"
-                    ></button>
-                    <div class="toast-body">Servicio añadido al carro con éxito.</div>
-                </div>
-            </div>
+            </section>
         </div>
 
         <!-- FOOTER -->

@@ -12,7 +12,14 @@ if (isset($_POST["logout"])) {
 }
 
 if (isset($_SESSION["user"]) || isset($_COOKIE["user"])) {
-    echo '<li><a href="' . $path . '/nav/carrito.html" class="dropdown-item">Ver carro</a></li>';
+    echo '
+    <li>
+        <a id="carro" href="' . $path . '/nav/carrito.html" class="d-flex dropdown-item justify-content-between">
+            Ver carro
+            <div class="d-inline-block">
+            </div>
+        </a>
+    </li>';
     echo '
     <li>
         <form action="' . $path . '/php/dropdown.php" method="POST">
