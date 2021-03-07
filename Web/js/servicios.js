@@ -1,39 +1,36 @@
-const nombresServicios = document.querySelectorAll('.servicio');
-const preciosServicios = document.querySelectorAll('.precio');
-const btnAniade = document.querySelectorAll('.aniade');
+import { muestraProductos } from "./modulos.js";
+
+const nombresServicios = document.querySelectorAll(".servicio");
+const preciosServicios = document.querySelectorAll(".precio");
+const btnAniade = document.querySelectorAll(".aniade");
+
+const toast = document.querySelector(".toast");
+const toastEl = new bootstrap.Toast(toast);
 
 let carroServicios;
 
-if (!localStorage.getItem('carroServicios'))
-{
-    carroServicios =
-    {
-        servicios: []
-    }
+if (!localStorage.getItem("carroServicios")) {
+    carroServicios = {
+        servicios: [],
+    };
 
-    for (let i = 0; i < nombresServicios.length; i++)
-    {
-        carroServicios.servicios.push
-        (
-            {
-                nombre: nombresServicios[i].textContent,
-                precio: parseFloat(preciosServicios[i].textContent.replace('€', '')),
-                cantidad: 0,
-            }
-        )  
+    for (let i = 0; i < nombresServicios.length; i++) {
+        carroServicios.servicios.push({
+            nombre: nombresServicios[i].textContent,
+            precio: parseFloat(preciosServicios[i].textContent.replace("€", "")),
+            cantidad: 0,
+        });
     }
+} else {
+    carroServicios = JSON.parse(localStorage.getItem("carroServicios"));
 }
-else
-{
-    carroServicios = JSON.parse(localStorage.getItem('carroServicios'));
-}   
 
-for (let i = 0; i < btnAniade.length; i++)
-{
-    btnAniade[i].addEventListener('click', function(event)
-    {
+for (let i = 0; i < btnAniade.length; i++) {
+    btnAniade[i].addEventListener("click", function (event) {
         carroServicios.servicios[i].cantidad++;
         localStorage.clear();
-        localStorage.setItem('carroServicios', JSON.stringify(carroServicios));
-    })
+        localStorage.setItem("carroServicios", JSON.stringify(carroServicios));
+        toastEl.show();
+        muestraProductos();
+    });
 }

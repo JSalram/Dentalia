@@ -1,7 +1,11 @@
-import { scrollTop, user } from "./modulos.js";
+import { muestraProductos, scrollTop, user } from "./modulos.js";
 
 window.onscroll = window.onload = () => {
     scrollTop();
 };
 
-user("..");
+async function dropdown() {
+    await user("..");
+    muestraProductos();
+}
+dropdown();

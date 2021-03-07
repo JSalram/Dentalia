@@ -1,20 +1,19 @@
-let carroServicios = JSON.parse(localStorage.getItem('carroServicios'));
-const tbody = document.querySelector('.container-servicios');
-const total = document.querySelector('.total');
-const nServicios = document.querySelector('.cantidadTotal');
+import { muestraProductos } from "./modulos.js";
 
-for (let i = 0; i < carroServicios.servicios.length; i++)
-{
-    if (carroServicios.servicios[i].cantidad > 0)
-    {
-        let tr = document.createElement('tr');
-        tr.innerHTML = 
-        `
+let carroServicios = JSON.parse(localStorage.getItem("carroServicios"));
+const tbody = document.querySelector(".container-servicios");
+const total = document.querySelector(".total");
+const nServicios = document.querySelector(".cantidadTotal");
+
+for (let i = 0; i < carroServicios.servicios.length; i++) {
+    if (carroServicios.servicios[i].cantidad > 0) {
+        let tr = document.createElement("tr");
+        tr.innerHTML = `
         <td>
             <div class="row">
             <div class="col-md-3 text-left">
                 <img
-                src="../img/servicio${i+1}.jpg"
+                src="../img/servicio${i + 1}.jpg"
                 alt=""
                 class="img-fluid d-none d-md-block rounded mb-2 shadow"
                 />
@@ -42,69 +41,62 @@ for (let i = 0; i < carroServicios.servicios.length; i++)
             </button>
             </div>
         </td>    
-        `
-        tr.classList.add('servicio');
+        `;
+        tr.classList.add("servicio");
         tbody.appendChild(tr);
-    }   
+    }
 }
 
-const cantidad = document.querySelectorAll('.cantidad');
-const nombre = document.querySelectorAll('.nombre');
-const precio = document.querySelectorAll('.precio');
-const btnEliminar = document.querySelectorAll('.btnEliminar');
+const cantidad = document.querySelectorAll(".cantidad");
+const nombre = document.querySelectorAll(".nombre");
+const precio = document.querySelectorAll(".precio");
+const btnEliminar = document.querySelectorAll(".btnEliminar");
 
 nServicios.textContent = totalServicios();
-total.textContent = sumaTotal() + '€';
+total.textContent = sumaTotal() + "€";
 
-for (let i = 0; i < cantidad.length; i++)
-{
-    cantidad[i].addEventListener('change', function(event)
-    {
+for (let i = 0; i < cantidad.length; i++) {
+    cantidad[i].addEventListener("change", function (event) {
         let nuevaCantidad = cantidad[i].value;
         let servicioModificado = buscaServicio(nombre[i].textContent);
         carroServicios.servicios[servicioModificado].cantidad = nuevaCantidad;
-        total.textContent = sumaTotal() + '€';
+        total.textContent = sumaTotal() + "€";
         localStorage.clear();
-        localStorage.setItem('carroServicios', JSON.stringify(carroServicios));
-    })
+        localStorage.setItem("carroServicios", JSON.stringify(carroServicios));
+        muestraProductos();
+    });
 
-    btnEliminar[i].addEventListener('click', function(event)
-    {
+    btnEliminar[i].addEventListener("click", function (event) {
         let servicioModificado = buscaServicio(nombre[i].textContent);
         cantidad[i].value = 0;
         carroServicios.servicios[servicioModificado].cantidad = 0;
-        total.textContent = sumaTotal() + '€';
+        total.textContent = sumaTotal() + "€";
         localStorage.clear();
-        localStorage.setItem('carroServicios', JSON.stringify(carroServicios));
+        localStorage.setItem("carroServicios", JSON.stringify(carroServicios));
         btnEliminar[i].parentElement.parentElement.parentElement.remove();
         nServicios.textContent = totalServicios();
-    })
-
+        muestraProductos();
+    });
 }
 
-function buscaServicio(nombre)
-{
+function buscaServicio(nombre) {
     let i = 0;
 
-    while (nombre !== carroServicios.servicios[i].nombre)
-    {
-        i++;    
+    while (nombre !== carroServicios.servicios[i].nombre) {
+        i++;
     }
 
     return i;
 }
 
-function sumaTotal()
-{
+function sumaTotal() {
     let total = 0;
-    for (let i = 0; i < cantidad.length; i++)
-    {
-        total += cantidad[i].value * parseFloat(precio[i].textContent.replace('€', ''));
+    for (let i = 0; i < cantidad.length; i++) {
+        total += cantidad[i].value * parseFloat(precio[i].textContent.replace("€", ""));
     }
     return total;
 }
 
-function totalServicios()
-{
-    return document.querySelectorAll('.servicio').length;
+function totalServicios() {
+    return document.querySelectorAll(".servicio").length;
 }
