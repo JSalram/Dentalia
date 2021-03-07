@@ -3,9 +3,9 @@ const tbody = document.querySelector('.container-servicios');
 const total = document.querySelector('.total');
 const nServicios = document.querySelector('.cantidadTotal');
 
-carroServicios.servicios.forEach(servicio => 
+for (let i = 0; i < carroServicios.servicios.length; i++)
 {
-    if (servicio.cantidad > 0)
+    if (carroServicios.servicios[i].cantidad > 0)
     {
         let tr = document.createElement('tr');
         tr.innerHTML = 
@@ -14,22 +14,22 @@ carroServicios.servicios.forEach(servicio =>
             <div class="row">
             <div class="col-md-3 text-left">
                 <img
-                src="../img/servicio.jpg"
+                src="../img/servicio${i+1}.jpg"
                 alt=""
                 class="img-fluid d-none d-md-block rounded mb-2 shadow"
                 />
             </div>
             <div class="col-md-9 text-left mt-sm-2">
-                <h4 class="nombre">${servicio.nombre}</h4>
+                <h4 class="nombre">${carroServicios.servicios[i].nombre}</h4>
             </div>
             </div>
         </td>
-        <td class="precio">${servicio.precio}€</td>
+        <td class="precio">${carroServicios.servicios[i].precio}€</td>
         <td>
             <input
             type="number"
             class="cantidad form-control form-control-lg text-center"
-            value="${servicio.cantidad}"
+            value="${carroServicios.servicios[i].cantidad}"
             min=0
             />
         </td>
@@ -46,7 +46,7 @@ carroServicios.servicios.forEach(servicio =>
         tr.classList.add('servicio');
         tbody.appendChild(tr);
     }   
-});
+}
 
 const cantidad = document.querySelectorAll('.cantidad');
 const nombre = document.querySelectorAll('.nombre');
