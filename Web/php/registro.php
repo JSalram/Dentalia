@@ -77,13 +77,14 @@ session_start();
         if ($usr != "" && $pwd != "" && $pwd2 != "") {
             if ($pwd === $pwd2) {
                 $conn = new mysqli("localhost", "root", "", "dentalia");
-                $sql = "INSERT INTO usuario VALUES(DEFAULT, '$usr','$pwd', 0)";
+                // $conn = new mysqli("sql205.epizy.com", "epiz_28101974", "yQN6qd04wxz", "epiz_28101974_dentalia");
+                $sql = "INSERT INTO usuario VALUES(DEFAULT, '$usr','$pwd')";
 
                 if ($conn->query($sql)) {
                     $_SESSION["user"] = $usr;
                     $_SESSION["registro"] = '<p class="text-center py-2 bg-success text-light">Usuario registrado y logueado con éxito</p>';
                 } else {
-                    $_SESSION["registro"] = '<p class="text-center py-2 bg-danger text-light">Usuario y/o contraseña ya existentes</p>';
+                    $_SESSION["registro"] = '<p class="text-center py-2 bg-danger text-light">Nombre de usuario ya existente</p>';
                 }
 
                 $conn->close();

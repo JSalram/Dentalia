@@ -56,7 +56,7 @@ header .text .btn:hover {
   color: #023047;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 610px) {
   header .text {
     width: 75%;
     top: 5%;

@@ -50,6 +50,11 @@ nav.navbar li a.active.btn {
   nav.navbar li.login button {
     width: 100%;
   }
+  nav.navbar li #carro {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
 }
 
 footer {

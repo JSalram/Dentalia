@@ -1,7 +1,6 @@
 <?php
 
 session_start();
-// $_SESSION["user"] = "Javi";
 $path = $_GET['path'];
 
 if (isset($_POST["logout"])) {
@@ -11,12 +10,19 @@ if (isset($_POST["logout"])) {
     header("Location: ../index.html");
 }
 
-if (isset($_SESSION["user"]) || isset($_COOKIE["user"])) {
+if (isset($_COOKIE["user"])) {
+    $_SESSION["user"] = $_COOKIE["user"];
+}
+
+if (isset($_SESSION["user"])) {
     echo '
+    <li class="dropdown-item text-center text-primary">
+        ' . ucfirst($_SESSION["user"]) . '
+    </li>
     <li>
         <a id="carro" href="' . $path . '/nav/carrito.html" class="d-flex dropdown-item justify-content-between">
             Ver carro
-            <div class="d-inline-block">
+            <div class="d-inline-block ms-2">
             </div>
         </a>
     </li>';
