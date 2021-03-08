@@ -71,7 +71,6 @@ session_start();
     //// INICIAR SESIÓN ////
     if (isset($_POST["usr"]) && isset($_POST["pwd"])) {
         $conn = new mysqli("localhost", "root", "", "dentalia");
-        // $conn = new mysqli("sql205.epizy.com", "epiz_28101974", "yQN6qd04wxz", "epiz_28101974_dentalia");
         $usr = $conn->real_escape_string($_POST["usr"]);
         $pwd = $conn->real_escape_string($_POST["pwd"]);
 

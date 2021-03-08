@@ -77,7 +77,6 @@ session_start();
         if ($usr != "" && $pwd != "" && $pwd2 != "") {
             if ($pwd === $pwd2) {
                 $conn = new mysqli("localhost", "root", "", "dentalia");
-                // $conn = new mysqli("sql205.epizy.com", "epiz_28101974", "yQN6qd04wxz", "epiz_28101974_dentalia");
                 $sql = "INSERT INTO usuario VALUES(DEFAULT, '$usr','$pwd')";
 
                 if ($conn->query($sql)) {
