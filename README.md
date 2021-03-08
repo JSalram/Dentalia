@@ -14,6 +14,8 @@ de una manera rápida y sencilla.
 
 También contamos con un registro de clientes, para poder mantenerse así en la base de datos de la empresa para próximas consultas, además de para poder añadir servicios a su carro.
 
+La web está subida a un hosting gratuito para su completa visualización y realización de pruebas por parte de profesores y alumnos. [Click aquí para ir](http://db-dentalia.rf.gd/index.html)
+
 ---
 
 Realizado por: Hamza Mohammad y Javier Salado Ramos
